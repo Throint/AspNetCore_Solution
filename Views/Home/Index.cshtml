@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@using TestTaskWeb.ModelViews;
+@model UploadModelView
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+  
+</div>
+<div>
+    <h1>
+        Upload your xml file
+    </h1>
+    <form asp-controller="Home" asp-action="Upload" method="post" enctype="multipart/form-data">
+     <div asp-validation-summary="ModelOnly"></div>  
+    <input type="file" accept="text/xml" asp-for="FormFile" />
+     <span asp-validation-for="FormFile"></span>
+        <input type ="submit" />
+
+    </form>
+
+
+</div>
+
